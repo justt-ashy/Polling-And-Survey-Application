@@ -169,7 +169,9 @@
             radio.setAttribute("value", option);
 
             const label = document.createElement("label");
+          //  this links the label to its corresponding radio button using the radio button's ID.
             label.setAttribute("for", inputId);
+
             label.textContent = option;
 
             const optionItem = document.createElement("li");
@@ -194,6 +196,7 @@
       }
 
       // Function to show poll results
+      // prints the result of poll
       function showResults(pollIndex) {
         const poll = polls[pollIndex];
         const totalVotes = poll.votes.reduce(
