@@ -167,7 +167,6 @@ body {
   font-weight: normal;
 }
 
-/* MEDIA QUERIES */
 @media screen and (max-width: 1285px) {
   .cards-wrapper {
     grid-template-columns: 1fr 1fr;
