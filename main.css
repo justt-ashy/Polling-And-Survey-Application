@@ -166,6 +166,7 @@ body {
   font-size: 1em;
   font-weight: normal;
 }
+/* MEDIA QUERIES */
 
 @media screen and (max-width: 1285px) {
   .cards-wrapper {
