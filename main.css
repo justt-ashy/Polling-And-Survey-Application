@@ -1,5 +1,4 @@
 body {
-
   background-image: url(wave-haikei.svg);
   background-size: cover;
   background-position: center center;
@@ -18,9 +17,7 @@ body {
   font-family: "Open Sans";
   background: #fafafa;
 }
-/* This function fetches data from an API (replace with your actual logic)
-    function fetchData() {
-      // ... code to fetch data ... */
+
 #cards {
   color: inherit;
 }
