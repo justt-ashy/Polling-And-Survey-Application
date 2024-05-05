@@ -228,14 +228,14 @@ input:required {
   transition: all 200ms linear;
 }
 
-/* Style for placeholder text inside form-group inputs on Firefox browsers  */
+/* Style for placeholder text inside form-group inputs on Firefox browser  */
 .form-group input:-moz-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
   transition: all 200ms linear;
 }
 
-/* Style for placeholder text inside form-group inputs on Firefox browsers  */
+/* Style for placeholder text inside form-group inputs on Firefox browser  */
 .form-group input::-webkit-input-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
