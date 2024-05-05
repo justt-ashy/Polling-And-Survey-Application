@@ -186,11 +186,13 @@ body {
     text-align: center;
   }
 }
-
+/* Media query for screens with a maximum width of 500px */
 @media screen and (max-width: 500px) {
+  /* Styles for the ".cards-wrapper" element on smaller screens */
   .cards-wrapper {
     padding: 4rem 2rem;
   }
+  /* /* Styles for the ".card" element on smaller screens */ */
   .card {
     max-width: calc(100vw - 4rem);
   }
@@ -234,8 +236,11 @@ h1 {
 }
 
 .pricing-item {
+  /* Styles for the element with class ".pricing-item" */
   display: flex;
+  /* * Layout properties */
   flex-direction: column;
+  /* Box properties  */
   align-items: center;
   justify-content: center;
   padding: 0 5rem 2rem 5rem;
@@ -244,6 +249,7 @@ h1 {
   overflow: hidden;
   cursor: pointer;
   transition: 0.2s all linear;
+  /* Additional styling */
   margin-bottom: 2rem;
   border-radius: 0 0 0.5rem 0.5rem;
 }
