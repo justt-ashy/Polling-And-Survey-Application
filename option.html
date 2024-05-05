@@ -250,9 +250,12 @@ function showResults(pollIndex) {
   const pollListContainer = document.getElementById("pollList");
 
   // Clear any existing results for this poll (optional)
+  // get the container element for the poll list
   const existingResults = pollListContainer.querySelector(`.poll-item:nth-child(${pollIndex + 1}) .poll-results`);
+  // check if the 'existingresults' elements was found 
   if (existingResults) {
-    existingResults.remove();
+    // if found remove the element from the DOM
+        existingResults.remove();
   }
 
   // Append the results list to the poll list container
