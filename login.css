@@ -17,7 +17,7 @@ body {
   margin: 0;
   padding: 0;
 }
-
+/* This section defines styles for an element  */
 a {
   cursor: pointer;
   transition: all 200ms linear;
@@ -44,7 +44,7 @@ p {
 h4 {
   font-weight: 600;
 }
-
+/* Targets all `<span>` elements that are descendants of `<h6>` elements */
 h6 span {
   padding: 0 20px;
   text-transform: uppercase;
