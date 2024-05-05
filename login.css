@@ -17,6 +17,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 /* This section defines styles for an element  */
 a {
   cursor: pointer;
@@ -44,6 +45,7 @@ p {
 h4 {
   font-weight: 600;
 }
+
 /* Targets all `<span>` elements that are descendants of `<h6>` elements */
 h6 span {
   padding: 0 20px;
@@ -66,6 +68,7 @@ h6 span {
   position: absolute;
   left: -9999px;
 }
+
 /* It hides the actual checkboxes (type="checkbox"]:
 checked, type="checkbox"]:not(:checked) { ... }) by 
 setting their position to absolute and moving them far
@@ -210,18 +213,21 @@ input:required {
   color: #ffeba7;
   transition: all 200ms linear;
 }
+
 /* Style for placeholder text inside form-group inputs on Microsoft Edge browser */
 .form-group input:-ms-input-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
   transition: all 200ms linear;
 }
+
 /* Style for placeholder text inside form-group inputs on Firefox browsers */
 .form-group input::-moz-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
   transition: all 200ms linear;
 }
+
 /* Style for placeholder text inside form-group inputs on Firefox browsers  */
 .form-group input:-moz-placeholder {
   color: #c4c3ca;
