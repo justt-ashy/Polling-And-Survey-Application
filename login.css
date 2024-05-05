@@ -66,7 +66,10 @@ h6 span {
   position: absolute;
   left: -9999px;
 }
-
+/* It hides the actual checkboxes (type="checkbox"]:
+checked, type="checkbox"]:not(:checked) { ... }) by 
+setting their position to absolute and moving them far
+ off-screen with left: -9999px. */
 .checkbox:checked + label,
 .checkbox:not(:checked) + label {
   position: relative;
@@ -207,51 +210,51 @@ input:required {
   color: #ffeba7;
   transition: all 200ms linear;
 }
-
+/* Style for placeholder text inside form-group inputs on Microsoft Edge browser */
 .form-group input:-ms-input-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
   transition: all 200ms linear;
 }
-
+/* Style for placeholder text inside form-group inputs on Firefox browsers */
 .form-group input::-moz-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
   transition: all 200ms linear;
 }
-
+/* Style for placeholder text inside form-group inputs on Firefox browsers  */
 .form-group input:-moz-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
   transition: all 200ms linear;
 }
-
+/* Style for placeholder text inside form-group inputs on Firefox browsers  */
 .form-group input::-webkit-input-placeholder {
   color: #c4c3ca;
   opacity: 0.7;
   transition: all 200ms linear;
 }
-
+ /* Style for placeholder text inside form-group inputs on Firefox browsers  */
 .form-group input:focus:-ms-input-placeholder {
   opacity: 0;
   transition: all 200ms linear;
 }
-
+/* Style for placeholder text inside form-group inputs on Firefox browsers  */
 .form-group input:focus::-moz-placeholder {
   opacity: 0;
   transition: all 200ms linear;
 }
-
+/*  Style for placeholder text inside form-group inputs on Firefox browsers */
 .form-group input:focus:-moz-placeholder {
   opacity: 0;
   transition: all 200ms linear;
 }
-
+/* Style for placeholder text inside form-group inputs on Firefox browsers  */
 .form-group input:focus::-webkit-input-placeholder {
   opacity: 0;
   transition: all 200ms linear;
 }
-
+/* Style for placeholder text inside form-group inputs on Firefox browsers  */
 .btn {
   border-radius: 4px;
   height: 44px;
@@ -270,7 +273,7 @@ input:required {
   color: #102770;
   box-shadow: 0 8px 24px 0 rgba(255, 235, 167, 0.2);
 }
-
+/* Styles for buttons in active and focus states  */
 .btn:active,
 .btn:focus {
   background-color: #102770;

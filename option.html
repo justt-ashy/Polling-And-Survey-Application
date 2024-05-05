@@ -31,6 +31,7 @@
         width: 100%;
         box-sizing: border-box;
       }
+      /* heading */
       h1 {
         color: #333;
       }
@@ -166,13 +167,23 @@
             radio.setAttribute("name", `pollOption_${pollIndex}`);
             radio.setAttribute("value", option);
 
+
+            // createv a label element
             const label = document.createElement("label");
+            // // Set the "for" attribute of the label to match the radio button's ID
             label.setAttribute("for", inputId);
+            // set the text content of the label to the option text
             label.textContent = option;
 
+
+            // Create a list item element (assuming this radio button is part of a list)
             const optionItem = document.createElement("li");
+            // Append the radio button element to the list item
+
             optionItem.appendChild(radio);
+            // Append the label element (which is associated with the radio button) to the list item
             optionItem.appendChild(label);
+            //  Append the entire list item (containing radio button and label) to the option list
             optionList.appendChild(optionItem);
           });
 
@@ -192,6 +203,7 @@
       }
 
       // Function to show poll results
+      // poll constant 
       function showResults(pollIndex) {
         const poll = polls[pollIndex];
         const totalVotes = poll.votes.reduce(
