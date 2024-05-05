@@ -172,15 +172,15 @@
 
             // createv a label element
             const label = document.createElement("label");
-<<<<<<< HEAD
+           HEAD
             // // Set the "for" attribute of the label to match the radio button's ID
             label.setAttribute("for", inputId);
             // set the text content of the label to the option text
-=======
-          //  this links the label to its corresponding radio button using the radio button's ID.
+
+   //  this links the label to its corresponding radio button using the radio button's ID.
             label.setAttribute("for", inputId);
 
->>>>>>> ab18e646c4e5d381d1a5813ba7cfd3f6c5a53d23
+   
             label.textContent = option;
 
 
@@ -208,40 +208,157 @@
 
           pollList.appendChild(li);
         });
+        const voteButton = document.createElement("button");
+        voteButton.textContent = "Vote";
+        voteButton.addEventListener("click", () => castVote(pollIndex, optionIndex));
+      optionItem.appendChild(voteButton);
+
+      function castVote(pollIndex, optionIndex) {
+      const polls = /* your polls array */  // Assuming polls is defined elsewhere
+  polls[pollIndex].votes[optionIndex]++;  // Increment vote count for selected option
+  displayPolls();  // Update poll list with new vote count
+}
+
       }
 
       // Function to show poll results
-<<<<<<< HEAD
+      HEAD
       // poll constant 
-=======
-      // prints the result of poll
->>>>>>> ab18e646c4e5d381d1a5813ba7cfd3f6c5a53d23
-      function showResults(pollIndex) {
-        const poll = polls[pollIndex];
-        const totalVotes = poll.votes.reduce(
-          (total, count) => total + count,
-          0
-        );
+// 
+// / prints the result of poll
 
-        if (totalVotes === 0) {
-          alert("No votes yet.");
-          return;
-        }
+function showResults(pollIndex) {
+  const poll = polls[pollIndex];
+  const totalVotes = poll.votes.reduce((total, count) => total + count, 0);
 
-        const percentages = poll.votes.map(
-          (count) => (count / totalVotes) * 100
-        );
+  if (totalVotes === 0) {
+    alert("No votes yet.");
+    return;
+  }
 
-        // Display the results
-        alert(
-          poll.options
-            .map(
-              (option, optionIndex) =>
-                `${option}: ${percentages[optionIndex].toFixed(2)}%`
-            )
-            .join("\n")
-        );
-      }
+  const resultsList = document.createElement("ul");  // Create an unordered list
+  resultsList.className = "poll-results";  // Add a class for styling (optional)
+
+  poll.options.forEach((option, optionIndex) => {
+    const percentage = (poll.votes[optionIndex] / totalVotes) * 100;
+    const resultItem = document.createElement("li");
+    resultItem.textContent = `${option}: ${percentage.toFixed(2)}%`;
+    resultsList.appendChild(resultItem);
+  });
+
+  // Find the poll list container (assuming it has an ID of "pollList")
+  const pollListContainer = document.getElementById("pollList");
+
+  // Clear any existing results for this poll (optional)
+  const existingResults = pollListContainer.querySelector(`.poll-item:nth-child(${pollIndex + 1}) .poll-results`);
+  if (existingResults) {
+    existingResults.remove();
+  }
+
+  // Append the results list to the poll list container
+  const pollItem = pollListContainer.querySelector(`.poll-item:nth-child(${pollIndex + 1})`);
+  pollItem.appendChild(resultsList);
+}
+
+function showResults(pollIndex) {
+  const poll = polls[pollIndex];
+  const totalVotes = poll.votes.reduce((total, count) => total + count, 0);
+
+  if (totalVotes === 0) {
+    alert("No votes yet.");
+    return;
+  }
+
+  const resultsList = document.createElement("ul");  // Create an unordered list
+  resultsList.className = "poll-results";  // Add a class for styling (optional)
+
+  poll.options.forEach((option, optionIndex) => {
+    const percentage = (poll.votes[optionIndex] / totalVotes) * 100;
+    const resultItem = document.createElement("li");
+    resultItem.textContent = `${option}: ${percentage.toFixed(2)}%`;
+    resultsList.appendChild(resultItem);
+  });
+
+  // Find the poll list container (assuming it has an ID of "pollList")
+  const pollListContainer = document.getElementById("pollList");
+
+  // Clear any existing results for this poll (optional)
+  const existingResults = pollListContainer.querySelector(`.poll-item:nth-child(${pollIndex + 1}) .poll-results`);
+  if (existingResults) {
+    existingResults.remove();
+  }
+
+  // Append the results list to the poll list container
+  const pollItem = pollListContainer.querySelector(`.poll-item:nth-child(${pollIndex + 1})`);
+  pollItem.appendChild(resultsList);
+}
+
+function showResults(pollIndex) {
+  const poll = polls[pollIndex];
+  const totalVotes = poll.votes.reduce((total, count) => total + count, 0);
+
+  if (totalVotes === 0) {
+    alert("No votes yet.");
+    return;
+  }
+
+  const resultsList = document.createElement("ul");  // Create an unordered list
+  resultsList.className = "poll-results";  // Add a class for styling (optional)
+
+  poll.options.forEach((option, optionIndex) => {
+    const percentage = (poll.votes[optionIndex] / totalVotes) * 100;
+    const resultItem = document.createElement("li");
+    resultItem.textContent = `${option}: ${percentage.toFixed(2)}%`;
+    resultsList.appendChild(resultItem);
+  });
+
+  // Find the poll list container (assuming it has an ID of "pollList")
+  const pollListContainer = document.getElementById("pollList");
+
+  // Clear any existing results for this poll (optional)
+  const existingResults = pollListContainer.querySelector(`.poll-item:nth-child(${pollIndex + 1}) .poll-results`);
+  if (existingResults) {
+    existingResults.remove();
+  }
+
+  // Append the results list to the poll list container
+  const pollItem = pollListContainer.querySelector(`.poll-item:nth-child(${pollIndex + 1})`);
+  pollItem.appendChild(resultsList);
+}
+
+function showResults(pollIndex) {
+  const poll = polls[pollIndex];
+  const totalVotes = poll.votes.reduce((total, count) => total + count, 0);
+
+  if (totalVotes === 0) {
+    alert("No votes yet.");
+    return;
+  }
+
+  const resultsList = document.createElement("ul");  // Create an unordered list
+  resultsList.className = "poll-results";  // Add a class for styling (optional)
+
+  poll.options.forEach((option, optionIndex) => {
+    const percentage = (poll.votes[optionIndex] / totalVotes) * 100;
+    const resultItem = document.createElement("li");
+    resultItem.textContent = `${option}: ${percentage.toFixed(2)}%`;
+    resultsList.appendChild(resultItem);
+  });
+
+  // Find the poll list container (assuming it has an ID of "pollList")
+  const pollListContainer = document.getElementById("pollList");
+
+  // Clear any existing results for this poll (optional)
+  const existingResults = pollListContainer.querySelector(`.poll-item:nth-child(${pollIndex + 1}) .poll-results`);
+  if (existingResults) {
+    existingResults.remove();
+  }
+
+  // Append the results list to the poll list container
+  const pollItem = pollListContainer.querySelector(`.poll-item:nth-child(${pollIndex + 1})`);
+  pollItem.appendChild(resultsList);
+}
+      
 
       // Initial array to store polls
       const polls = [];
