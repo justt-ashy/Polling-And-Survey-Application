@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- <hypertext markup langauge> -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -69,6 +70,7 @@
         padding: 0;
       }
       .poll-item {
+        /* poll itmes function */
         background-color: #f9f9f9;
         border: 1px solid #ddd;
         border-radius: 4px;
@@ -170,9 +172,15 @@
 
             // createv a label element
             const label = document.createElement("label");
+<<<<<<< HEAD
             // // Set the "for" attribute of the label to match the radio button's ID
             label.setAttribute("for", inputId);
             // set the text content of the label to the option text
+=======
+          //  this links the label to its corresponding radio button using the radio button's ID.
+            label.setAttribute("for", inputId);
+
+>>>>>>> ab18e646c4e5d381d1a5813ba7cfd3f6c5a53d23
             label.textContent = option;
 
 
@@ -203,7 +211,11 @@
       }
 
       // Function to show poll results
+<<<<<<< HEAD
       // poll constant 
+=======
+      // prints the result of poll
+>>>>>>> ab18e646c4e5d381d1a5813ba7cfd3f6c5a53d23
       function showResults(pollIndex) {
         const poll = polls[pollIndex];
         const totalVotes = poll.votes.reduce(
