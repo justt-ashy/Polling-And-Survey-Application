@@ -242,31 +242,31 @@ input:required {
   transition: all 200ms linear;
 }
 
-/* Style for placeholder text inside form-group inputs on Firefox browsers  */
+/* Style for placeholder text inside form-group inputs on Firefox browser  */
 .form-group input:focus:-ms-input-placeholder {
   opacity: 0;
   transition: all 200ms linear;
 }
 
-/* Style for placeholder text inside form-group inputs on Firefox browsers  */
+/* Style for placeholder text inside form-group inputs on Firefox browser  */
 .form-group input:focus::-moz-placeholder {
   opacity: 0;
   transition: all 200ms linear;
 }
 
-/*  Style for placeholder text inside form-group inputs on Firefox browsers */
+/*  Style for placeholder text inside form-group inputs on Firefox browser */
 .form-group input:focus:-moz-placeholder {
   opacity: 0;
   transition: all 200ms linear;
 }
 
-/* Style for placeholder text inside form-group inputs on Firefox browsers  */
+/* Style for placeholder text inside form-group inputs on Firefox browser  */
 .form-group input:focus::-webkit-input-placeholder {
   opacity: 0;
   transition: all 200ms linear;
 }
 
-/* Style for placeholder text inside form-group inputs on Firefox browsers  */
+/* Style for placeholder text inside form-group inputs on Firefox browser  */
 .btn {
   border-radius: 4px;
   height: 44px;
