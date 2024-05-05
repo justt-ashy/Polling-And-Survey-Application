@@ -275,10 +275,14 @@ h2 {
 }
 
 .pricing-kit {
+  /* Styles for the element with class ".pricing-kit" */
   font-size: 1.3rem;
+/* Text properties  */
   background-color: #1c1b28;
+  /*  Background and text color */
   color: white;
   padding: 0.7rem 1.5rem;
+  /*  Box properties */
   border-radius: 0 0 2rem 2rem;
 }
 
